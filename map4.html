@@ -7,16 +7,49 @@
 </head>
 <body>
     <header>
-        <h1>Map 4</h1>
+        <h1>EP.04 Value-by-Alpha Bundestagswahl 2021/25</h1>
         <p><a href="index.html" style="color:#fff;text-decoration:underline;">← Zurück zur Übersicht</a></p>
     </header>
     <main>
         <section class="map-detail">
-            <img src="https://via.placeholder.com/600x360?text=Map+4" alt="Map 4" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <h2>Description</h2>
-            <p>This is a placeholder description for Map 4. Describe the map’s style, features, or what makes it unique here.</p>
-            <h2>How It Was Created</h2>
-            <p>Explain the process, tools, and techniques used to create Map 4. For example: “Generated using a custom script to visualize climate data.”</p>
+            <img src="04karte.png" alt="Map 4" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+           <h2>Beschreibung</h2>
+            <p>
+                Mit Value-by-Alpha wird die Höhe eines Wertes durch Farbintensität ausgedrückt. In diesem Fall %-Stimmenanteil der Siegerpartei in der jeweiligen Bundestagswahl.
+            </p>
+            <h2>Arbeitsschritte und Vor- und Nachteile</h2>
+            <h3>1. Dasymetrische Choroplethenkarte</h3>
+            <ol>
+                <li>Download der Daten: Wahldaten und Geometrie von der Seite der Bundeswahlleiterin </li>
+                <li>Bereinigen der Wahldaten (auf 5 Parteien und Zweitstimme)</li>
+                <li>Verknüpfen der Geometrie mit den Sachdaten über die Wahlkreisnummer</li>
+                <li>Speicherung der Daten und Auflösen</li>
+                <li>Ermitteln des Wahlsiegers je Wahlkreis + übernehmen der Prozentzahl in je eine neue Spalte</li>
+                <li>Die Wahlkreise werden in die Farbe der Partei des Wahlsiegers kategorisiert</li>
+                <li>Regelbasiert wird eine Fläche über die Wahlkreise gelegt, die die Intensität der Flächen anhand der Prozentualen Anteile am Gesamtergebnis stärker (höhere Anteil), blasser (geringer Anteil) darstellt</li>
+                <li>Für die Druckzusammenstellen werden die Kartenbilder für 2021 und 2025 platziert</li>
+                <li>Überschrift, Maßstab, Maßstabsbalken, Quellen, Legende und Ersteller hinzugefügt</li>
+                <li>Zusätzlich muss entweder aus der Legende deutlich werden, warum die Flächen blasser sind, oder es muss einen Hinweistext geben</li>
+            <ol>
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Realistischere Darstellung von Verteilungen</li>
+                <li>Zeigt Daten dort, wo sie tatsächlich auftreten (z. B. Bevölkerungsdichte nur in besiedelten Flächen statt gleichmäßig über ganze Gemeindeflächen verteilt)</li>
+                <li>Vermeidung von Flächenverzerrungen</li>
+                <li>Administrative Grenzen können große unbesiedelte Flächen enthalten (z. B. Wälder, Seen), die bei klassischen Choroplethenkarten zu falschen Interpretationen führen. Dasymetrische Karten reduzieren diesen Effekt.</li>
+                <li>Höhere Genauigkeit bei kleinen Flächen</li>
+                <li>Besonders nützlich bei der Darstellung von Phänomenen, die räumlich ungleich verteilt sind (z. B. Bewohner)</li>
+                <li>Vermeidung von falscher Darstellung</li>
+                <li>Bessere Vergleichbarkeit zwischen Regionen</li>
+            </ul>
+
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Die notwendigen Daten wie z.B. Landnutzungsdaten liegen nicht immer vor</li>
+                <li>Die Erstellung ist komplexer als bei klassischen Choropletenkarten, da zusätzliche Berechnungen und Modellierungen notwendig sind</li>
+                <li>Die Karten können für manche Betrachter schwerer zu verstehen sein, da die Flächen nicht mehr direkt mit administrativen Einheiten übereinstimmen</li>
+                <li>Die Verteilung innerhalb einer Einheit ist noch immer modelliert und bildet die Verhältnisse nicht exakt ab</li>
+            </ul>
         </section>
     </main>
     <footer>
