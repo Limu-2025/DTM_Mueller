@@ -13,10 +13,35 @@
     <main>
         <section class="map-detail">
             <img src="05karte.png" alt="Map 5" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <h2>Description</h2>
-            <p>This is a placeholder description for Map 5. Describe the map’s style, features, or what makes it unique here.</p>
-            <h2>How It Was Created</h2>
-            <p>Explain the process, tools, and techniques used to create Map 5. For example: “Created using satellite imagery and hand-drawn overlays.”</p>
+            <h2>Beschreibung</h2>
+            <p>
+                Die Tile Map vergleicht die Anzahl der Einwohner pro Brauerei zwischen den Bundesländern der BRD. Während es in Bayern, Sachsen, Thüringen mit die
+                meisten Braureien pro Einwohner gibt, ist dies im Saarland, Nordrhein-Westfalen und Hamburg der gegenteilige Fall.
+            </p>
+            <h2>Arbeitsschritte und Vor- und Nachteile</h2>
+            <h3>1. Tile-Maps</h3>
+            <ol>
+                <li>Download der Daten: vom Deutschen Brauer Bund eV.</li>
+                <li>Erstellen eines Gitters über Deutschland (150km).</li>
+                <li>Löschen der Gitterflächen, sodass der Umriss von Deutschland zu erkenn ist; 16 Teile, eins pro Bundesland.</li>
+                <li>Aufbereiten der Sachdaten, es ist darauf zu achten, dass ein Verknüpfungsfeld zwischen Sachdaten und Geometrie geschaffen wird.</li>
+                <li>Symbolisierung abgestuft je nach Thema und unterschiedliche Füllung nach den gestelllten Kritierien.</li>
+                <li>Für die Druckzusammenstellen wird das Kartenbilder platziert.</li>
+                <li>Überschrift, Quellen, Legende und Ersteller hinzugefügt.</li>
+            </ol>
+
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Gleiche visuelle Repräsentation. Große Flächenländer wie Bayern oder Niedersachsen erhalten nicht mehr Platz als kleine Stadtstaaten wie Bremen oder Hamburg.</li>
+                <li>Fokus auf den Inhalt. Da alle Kacheln gleich groß sind, lenkt nichts von der Farbskala ab. Der Fokus liegt voll auf dem thematischen Inhalt.</li>
+                <li>Kompakte und klar strukturierte Darstellung. Die Karte ist übersichtlich, platzsparend und symmetrisch, ideal für Präsentationen oder Dokument.</li>
+            </ul>
+
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Da alle Regionen in einer standardisierten Form dargestellt werden, gehen natürliche Formen und Größenunterschiede verloren.</li>
+                <li>Die Optik kann für Nutzer ungewohnt sein, da sie eher abstrakt gestaltet ist.</li>
+            </ul>
         </section>
     </main>
     <footer>
