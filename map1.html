@@ -12,11 +12,48 @@
     </header>
     <main>
         <section class="map-detail">
-            <img src="image.png" alt="Map 1" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <h2>Description</h2>
-            <p>This is a placeholder description for Map 1. Describe the map’s style, features, or what makes it unique here.</p>
-            <h2>How It Was Created</h2>
-            <p>Explain the process, tools, and techniques used to create Map 1. For example: “This map was generated using XYZ software, with data sourced from ABC. The coloring technique highlights population density.”</p>
+            <img src="01karte.png" alt="Map 1" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <h2>Beschreibung</h2>
+            <p>Die Karte im A3 Format umfasst zwei ähnliche Darstellungen der Bevölkerungsdichte in Berlins nach Planungsräumen (LOR):
+                Einfache Choroplethenkarte – Bevölkerungszahl gemessen auf die Gesamtfläch
+                Dasymetrische Choroplethenkarte – zugeschnittene Bevölkerungszahl auf tatsächlich bewohntem Gebiet.</p>
+            <h2>Arbeitschritte und Vor- und Nachteile</h2>
+            <p>1. Dasymetrische Choroplethenkarte
+
+                - Download der Daten: LOR-Daten (Daten zur Bevölkerungsstatistik), CLC-Daten, Geometrie Berlin
+                - Verbinden der Geometrie (Berlin) mit den Sachdaten (Bevölkerungsdaten) mittels einer Verknüpfung
+                - Filterung der CLC-Daten nach den Urbanen-Räumen (111,112)
+                - Speicherung der Daten und Auflösen
+                - Verschneiden der restlichen Flächen als keine Wohngebiete
+                - Verschneidung der Bevölkerungsdaten mit den Urbanen Räumen
+                - Berechnung der Flächen
+
+                - für die Visualisierung wird eine abgestufte Symbolisierung verwendet
+                - der Wert wird aus den Einwohnern / Fläche /10000 als Einwohner pro m² berechnet
+                - es werden 5 Klassen nach Jenks gebildet
+                - es ist darauf zu achten, dass die Klassen nicht verbunden sind
+                - für die Symbolisierung wird ein Farbverlauf von Weiß (gering) nach Rot (hoch) genommen
+
+                - für die Druckzusammenstellen werden die beiden Kartenbilder platziert
+                - Überschrift, Maßstab, Maßstabsbalken, Quellen, Legende und Ersteller hinzugefügt
+                Vorteile: 
+                - Realistischere Darstellung von Verteilungen
+                - Sie zeigt Daten dort, wo sie tatsächlich auftreten (z. B. Bevölkerungsdichte nur in besiedelten Flächen statt gleichmäßig über ganze Gemeindeflächen verteilt).
+                - Vermeidung von Flächenverzerrungen
+                - Administrative Grenzen können große unbesiedelte Flächen enthalten (z. B. Wälder, Seen), die bei klassischen Choroplethenkarten zu falschen Interpretationen führen. Dasymetrische Karten reduzieren diesen Effekt.
+                - Höhere Genauigkeit bei kleinen Flächen
+                - Besonders nützlich bei der Darstellung von Phänomenen, die räumlich ungleich verteilt sind (z. B. Bewohner).
+                - Vermeidung von falscher Darstellung
+                - Indem unbedeutende Flächen nicht dargestellt werden, wird der Eindruck vermieden, dass Daten dort vorliegen, wo sie in Wirklichkeit nicht relevant sind.
+                - Bessere Vergleichbarkeit zwischen Regionen
+                - Da die Darstellung an reale Nutzungsflächen angepasst ist, wird der Vergleich zwischen Regionen mit unterschiedlicher Siedlungsstruktur fairer.
+                Nachteile:
+                - Die notwendigen Daten wie z.B. Landnutzungsdaten liegen nicht immer vor
+                - Die Erstellung ist komplexer als bei klassischen Choropletenkarten, da zusätzliche Berechnungen und Modellierungen notwendig sind
+                - Die Karten können für manche Betrachter schwerer zu verstehen sein, da die Flächen nicht mehr direkt mit administrativen Einheiten übereinstimmen
+                - Die Verteilung innerhalb einer Einheit ist noch immer modelliert und bildet die Verhältnisse nicht exakt ab
+
+</p>
         </section>
     </main>
     <footer>
