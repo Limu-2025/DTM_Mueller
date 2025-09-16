@@ -7,16 +7,54 @@
 </head>
 <body>
     <header>
-        <h1>Map 3</h1>
+        <h1>EP.03 Punktrasterkarten AirBnB Wien</h1>
         <p><a href="index.html" style="color:#fff;text-decoration:underline;">← Zurück zur Übersicht</a></p>
     </header>
     <main>
         <section class="map-detail">
-            <img src="https://via.placeholder.com/600x360?text=Map+3" alt="Map 3" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <h2>Description</h2>
-            <p>This is a placeholder description for Map 3. Describe the map’s style, features, or what makes it unique here.</p>
-            <h2>How It Was Created</h2>
-            <p>Explain the process, tools, and techniques used to create Map 3. For example: “This map was created using open-source GIS data and colored in Photoshop.”</p>
+            <img src="03karte.png" alt="Map 3" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <h2>Beschreibung</h2>
+            <p>
+                Die Karte von AirBnB Unterkünften in Wien zeigt die Plätze und die Art der Unterkunft an:
+            </p>
+            <ul>
+                <li>Privat Zimmer</li>
+                <li>Geteilte Zimmer</li>
+                <li>Hotel Zimmer</li>
+                <li>Eigen Whonnung</li>
+            </ul>
+
+            <h2>Arbeitsschritte und Vor- und Nachteile</h2>
+            <h3>1. Punktrasterkarte</h3>
+            <ol>
+                <li>Download der Daten: Übernachtungsdaten und Geometrie der Stadt Wien von InsideAirbnb </li>
+                <li>Erzeugen eines Gitternetzes über das Stadtgebiet z.B. 500m mit Gittererzeugen</li>
+                <li>Verschneidung des Gitternetzes und der Geometrie der Stadt</li>
+                <li>Einladen der Punktdaten (nach Übernachtungsart: Hotel, privat, usw.)</li>
+                <li>Verschneiden der restlichen Flächen als keine Wohngebiete</li>
+                <li>Punkte (Übernachtungsart) in Polygon zählen: beim Zähler ist darauf zu achten, dass in jedem Feld ein Attribut steht, also am besten ID nehmen</li>
+                <li>die Gitternetze werden ausgeblendet</li>
+                <li>Für die Visualisierung wird eine abgestufte Symbolisierung verwendet</li>
+                <li>als Feld wird das neu erstellt Zählerfeld genommen</li>
+                <li>es werden 5 Klassen nach Jenks gebildet (es darauf zu achten, dass Ganzzahlen verwendet werden)</li>
+                <li>Zum einen wird die Zahl über die Größe definiert zum anderen über die Farbe</li>
+                <li>Für die Übernachtungsplätze werden verschieden Farben verwendt</li>
+                <li>Für die Druckzusammenstellung werden die beiden Kartenbilder platziert</li>
+                <li>Überschrift, Maßstab, Maßstabsbalken, Quellen, Legende und Ersteller hinzugefügt</li>
+            </ol>
+
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Vorteile ähnlich zu Gitterchoroplethenkarte. Durch nutzen der Punkte kann eine Karte unter die Punkte gelegt werden, was bei der räumlichen Orientierung hilft.</li>
+                <li>Nutzung der Punktgröße zum Darstellen von DatenDie Punktgröße kann angepasst werden, um sowohl große als auch kleine Datenmengen effektiv darzustellen.</li>
+            </ul>
+
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Die Wahl der Punktdichte kann zu einer falschen Wahrnehmung der tatsächlichen Werte führen.</li>
+                <li>Zu große Unterschiede in den Datenwerten können zu Überlappungen bzw. großen freien Flächen ohne sichtbare Datenwerte führen.</li>
+                <li>Bei zu hoher Punktdichte kann die Karte überladen wirken, während eine zu geringe Dichte wichtige Details verlieren lässt.</li>
+            </ul>
         </section>
     </main>
     <footer>
