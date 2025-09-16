@@ -18,7 +18,7 @@
                 Mit Value-by-Alpha wird die Höhe eines Wertes durch Farbintensität ausgedrückt. In diesem Fall %-Stimmenanteil der Siegerpartei in der jeweiligen Bundestagswahl.
             </p>
             <h2>Arbeitsschritte und Vor- und Nachteile</h2>
-            <h3>1. Dasymetrische Choroplethenkarte</h3>
+            <h3>1. Value-by-Alpha</h3>
             <ol>
                 <li>Download der Daten: Wahldaten und Geometrie von der Seite der Bundeswahlleiterin </li>
                 <li>Bereinigen der Wahldaten (auf 5 Parteien und Zweitstimme)</li>
@@ -33,22 +33,16 @@
             <ol>
             <h3>Vorteile:</h3>
             <ul>
-                <li>Realistischere Darstellung von Verteilungen</li>
-                <li>Zeigt Daten dort, wo sie tatsächlich auftreten (z. B. Bevölkerungsdichte nur in besiedelten Flächen statt gleichmäßig über ganze Gemeindeflächen verteilt)</li>
-                <li>Vermeidung von Flächenverzerrungen</li>
-                <li>Administrative Grenzen können große unbesiedelte Flächen enthalten (z. B. Wälder, Seen), die bei klassischen Choroplethenkarten zu falschen Interpretationen führen. Dasymetrische Karten reduzieren diesen Effekt.</li>
-                <li>Höhere Genauigkeit bei kleinen Flächen</li>
-                <li>Besonders nützlich bei der Darstellung von Phänomenen, die räumlich ungleich verteilt sind (z. B. Bewohner)</li>
-                <li>Vermeidung von falscher Darstellung</li>
-                <li>Bessere Vergleichbarkeit zwischen Regionen</li>
+                <li>Bessere Gewichtung nach Bedeutung → Dunkle Farben = viele Wähler (großer Einfluss) → Blassere Farben = weniger Wähler (geringerer Einfluss)</li>
+                <li>Zusätzliche Dimension ohne Karte mehr hinzuzufügen. Anstatt ein zweites Diagramm oder eine komplexe Visualisierung zu nutzen, wird die Bedeutung eines Gebiets durch Transparenz vermittelt.</li>
+                <li>Gibt den Daten mehr Kontext.Die Karte vermittelt realistischer, wo politische Mehrheiten tatsächlich stark existieren, anstatt nur darzustellen, wie sie geografisch verteilt sind.</li>
             </ul>
 
             <h3>Nachteile:</h3>
             <ul>
-                <li>Die notwendigen Daten wie z.B. Landnutzungsdaten liegen nicht immer vor</li>
-                <li>Die Erstellung ist komplexer als bei klassischen Choropletenkarten, da zusätzliche Berechnungen und Modellierungen notwendig sind</li>
-                <li>Die Karten können für manche Betrachter schwerer zu verstehen sein, da die Flächen nicht mehr direkt mit administrativen Einheiten übereinstimmen</li>
-                <li>Die Verteilung innerhalb einer Einheit ist noch immer modelliert und bildet die Verhältnisse nicht exakt ab</li>
+                <li>Hohe Transparenz kann dazu führen, dass Karten schwer lesbar sind, insbesondere bei komplexen Datensätzen</li>
+                <li>Oft nur grobe Einschätzung von Größenordnungen möglich, anstatt präzise Werte darzustellen</li>
+                <li>Transparenzwerte können je nach Bildschirm oder Druckqualität variieren</li>
             </ul>
         </section>
     </main>
