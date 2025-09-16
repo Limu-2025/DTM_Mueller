@@ -7,16 +7,49 @@
 </head>
 <body>
     <header>
-        <h1>Map 6</h1>
+        <h1>EP.06 Flowmap Studentenaustausch </h1>
         <p><a href="index.html" style="color:#fff;text-decoration:underline;">← Zurück zur Übersicht</a></p>
     </header>
     <main>
         <section class="map-detail">
             <img src="https://via.placeholder.com/600x360?text=Map+6" alt="Map 6" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <h2>Description</h2>
-            <p>This is a placeholder description for Map 6. Describe the map’s style, features, or what makes it unique here.</p>
-            <h2>How It Was Created</h2>
-            <p>Explain the process, tools, and techniques used to create Map 6. For example: “Made with watercolor textures scanned and layered over a digital base map.”</p>
+           <h2>Beschreibung</h2>
+            <p>
+                Die Karte zeigt Studentenaustausch von und zu der BHT an. 
+            </p>
+            <h2>Arbeitsschritte und Vor- und Nachteile</h2>
+            <h3>1. Flowmap</h3>
+            <ol>
+                <li>Download der Daten: zum internationalen Studierendenaustausch von und zur BHT (Vom Referat Internationale Angelegenheiten zur Verfügung gestellt).</li>
+                <li>Bearbeitung der Sachdaten.</li>
+                <li>Verknüpfung von Sachdaten mit Geometriedaten.</li>
+                <li>Erstellen der Zentroide für die Länder die gebraucht werden.</li>
+                <li>Erstellen eines extra Punktes vom Ausgangspunkt sie die Symbolisierung.</li>
+                <li>Berechnen der X- und Y-Koordinate in der Attributtabelle des Punktlayers.</li>
+                <li>Einfügen der X- und Y-Koordinate in die Attributtabelle der Uni der Austauschstudenten.</li>
+                <li>Mit dem Werkzeug XY to Line Linien Zwischen der Bht und dem Zentroid des Herkunftsuni erstellen.</li>
+                <li>Projektion: +proj=ortho +lat_0=50.3 +lon_0=30.3 +x_0=0+ y_0=0 +a=6371000 +b=6371000 +units=m +no_defs</li>
+                <li>Symbolisierung der Erde mit dem Punkt der Hauptstadt eine Ausdehnung von 12742000 m im Maßstab einstellen, über Markierung und Füllung die Erde erstellen (Farbe, Glow)</li>
+                <li>Farbe für die Staaten festlegen</li>
+                <li>Sutendenaustauschzahlen über abgestufte Punkte und Linien darstellen</li>
+                <li>Für die Druckzusammenstellung werden die beiden Kartenbilder platziert</li>
+                <li>Überschrift, Maßstab, Maßstabsbalken, Quellen, Legende und Ersteller hinzugefügt</li>
+            </ol>
+
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Darstellung von Objekten in einer Karte zueinander. Flowmaps können Beziehungen zwischen Objekten in einer Karte anzeigen und nicht nur die Daten des Objekts.</li>
+                <li>Gute Visualisierung von Mengen und Richtungen. Die Dicke oder Farbe der Pfeile/Punkte macht Unterschiede in Menge oder Stärke sofort sichtbar (z.B. Menge an Studenten).</li>
+                <li>Höherer Informationsgehalt und visuell ansprechender als Tabellen. Flowmaps visualisieren Daten, welche sonst nur in Tabellen ablesbar wären auf einen Blick verständlich, was besonders nützlich bei interregionalen oder globalen Daten ist.</li>
+            </ul>
+
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Bei hohen Datenmengen können sich Linien überlagern und die Karte unübersichtlich machen.</li>
+                <li>Die Richtung und Stärke der Flüsse kann schwer zu erfassen sein, besonders wenn die Linien komplex verlaufen.</li>
+                <li>Darstellung nur bei recht großräumigen Daten möglich.</li>
+                <li>Es sind präzise Daten zu Bewegungen oder Strömen nötig, die nicht immer verfügbar sind.</li>
+            </ul>
         </section>
     </main>
     <footer>
