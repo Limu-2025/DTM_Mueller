@@ -13,10 +13,37 @@
     <main>
         <section class="map-detail">
             <img src="08karte.png" alt="Map 8" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <h2>Description</h2>
-            <p>This is a placeholder description for Map 8. Describe the map’s style, features, or what makes it unique here.</p>
-            <h2>How It Was Created</h2>
-            <p>Explain the process, tools, and techniques used to create Map 8. For example: “Composed entirely of country flags to form the continents.”</p>
+           <h2>Beschreibung</h2>
+            <p>
+                Eine Karte zeigt die in der Nacht vom 17-18.11.2024 erfassten Sternschnuppen der Leoniniden über Deutschand jede Sternschnuppe wird farblich vom Eintritt bis zum Verglühen dargestellt.
+            </p>
+
+            <h2>Arbeitsschritte und Vor- und Nachteile</h2>
+            <h3>1. Animationen in QGIS </h3>
+            <ol>
+                <li>Downlaoad der Daten: Download der Daten von https://tammojan.github.io/meteormap/ für den Meteorschauer und den Zeitraum als csv Datei.</li>
+                <li>Einladen der csv über die Koordinaten.</li>
+                <li>bei den Einzelsymbolen den Typ Markierung wählen und als Unterpunkt den Geometriegenerator, dort Ausdruck make_line ( @geometry, make_point( "LonEnd", "LatEnd" )) eingeben.</li>
+                <li>Für die weitere Visualisierung eine interpolierte Linie erzeugen und die wie gewünscht visualisieren.</li>
+                <li>Eine dunkle Hintergrundkarte verwenden.</li>
+                <li>Für das Druckzusammenstellen wird das Kartenbilder auf dem gesamten Blatt platziert.</li>
+                <li>Überschrift, Quellen und Ersteller hinzugefügt.</li>
+            </ol>
+
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Veränderung über einen Zeitraum sichtbar machen. Durch die Nutzung der Zeitlichen Features in Qgis werden Veränderungen, die über einen Zeitraum in einer Karte stattfinden deutlicher sichtbar.</li>
+                <li>Bewegungen sichtbar machen. Durch die Nutzung von Animationen kann man Bewegungen, wie in der Wetterkarte oder beim den Meteoritenschauern die Räumliche Veränderung der Objekte sichtbar machen.</li>
+                <li>Abbilden von mehreren Datenquellen. Man kann mehre Datensätze nutzen, z.B: Meteoriten und Beobachtungsstationen und beobachten in welchem räumlichen Verhältnis beide zueinanderstehen.</li>
+            </ul>
+
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Animationen mit vielen Layern oder großen Datensätzen können deinen Rechner stark beanspruchen und kann zu Verzögerungen oder Abstürzen führen.</li>
+                <li>Die exportierten Videos unterstützen nur bestimmte Formate ,was die Weiterverarbeitung und Nutzung einschränken kann.</li>
+                <li>Die Vorbereitung der Daten (z. B. Zeitstempel) kann aufwendig sein.</li>
+                <li>Animationen lenken manchmal von der eigentlichen Aussage ab und können die Übersichtlichkeit beeinträchtigen.</li>
+            </ul>
         </section>
     </main>
     <footer>
