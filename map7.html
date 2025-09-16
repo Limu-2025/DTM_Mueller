@@ -7,16 +7,48 @@
 </head>
 <body>
     <header>
-        <h1>Map 7</h1>
+        <h1>EP.07 Mesh-Daten Orkan Kyrill</h1>
         <p><a href="index.html" style="color:#fff;text-decoration:underline;">← Zurück zur Übersicht</a></p>
     </header>
     <main>
         <section class="map-detail">
-            <img src="https://via.placeholder.com/600x360?text=Map+7" alt="Map 7" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <h2>Description</h2>
-            <p>This is a placeholder description for Map 7. Describe the map’s style, features, or what makes it unique here.</p>
-            <h2>How It Was Created</h2>
-            <p>Explain the process, tools, and techniques used to create Map 7. For example: “A stylized map using only lines and dots to represent borders and cities.”</p>
+            <img src="07karte.gif" alt="Map 7" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+             <h2>Beschreibung</h2>
+            <p>
+                Ein GIF zeigt wie Orkan Kyrill Januar 2007 über Europa und Deutschland hinwegzieht. 
+                Es zeigt die Bewegung des Windes über eine zeitliche Abfolge im Stundentakt. Im GIF sind Datum und Uhrzeit und Windvektoren aus einem GRIB Mesh Datensatz enthalten.
+            </p>
+
+            <h2>Arbeitsschritte und Vor- und Nachteile</h2>
+            <h3>1. Mesh-Daten</h3>
+            <ol>
+                <li>Download der gegeben Wetterdaten im grip-Format (von Copernicus).</li>
+                <li>Einladen der grip-Daten.</li>
+                <li>Symbolisiert wird der Wind als Fläche und als Linie.</li>
+                <li>Speicherung der Daten und Auflösen.</li>
+                <li>Erstellen eines Punktlayers der für die Darstellung der Zeit benötigt wird und in der Beschriftung mit format_date( @map_start_time, 'd. MMMM yyyy')  || '\n'  ||  format_date( @map_start_time, 'HH:mm') eingestellt wird.</li>
+                <li>Die Druckzusammenstellung findet auf dem Hauptoberfläche statt und nicht in dem Layout.</li>
+                <li>In Ansicht Dekoration wird ein Titel, Maßstab, Quellen und der Ersteller hinzugefügt.</li>
+                <li>Für die Animation muss man die Konsole Zeitsteuerungsfenster aufrufen.</li>
+                <li>Speichern der einzelnen Bilder.</li>
+                <li>Zusammenfügen der einzelnen Bilder zu einen GIF mit einem Browserprogramm oder über Photoshop oder ähnliche Programme.</li>
+            </ol>
+
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Darstellung zeitlicher Entwicklungen. Dadurch das man zeitliche Veränderungen live beobachten kann hat man eine viel höhere Aussagekraft als eine normale Karte, welche statisch auf einen Zeitpunkt begrenzt ist.</li>
+                <li>Analyse Raum-Zeit-Zusammenhänge. Durch die Mesh-Daten kombiniert man räumliche und zeitliche Darstellung. So kann man z. B. beobachten, wie schnell sich ein Wetterereignis ausbreitet oder wie sich Umweltwerte mit der Zeit verändern.</li>
+                <li>Darstellung Mehrer Größen gleichzeitig. Die in einem Mesh-Datensatz enthaltenen Informationen kann man zeitgleich visualisieren oder kombinieren und dadurch zusammenhänge leichter erkennen.</li>
+                <li>Erstellung eines GIFs.Man kann die Mesh-Daten als GIF darstellen und damit auch außerhalb einer Gis-Programms nutzen, z.B. einer Präsentation oder einem Text.</li>
+            </ul>
+
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Sie können große Datenmengen erzeugen, die viel Speicherplatz benötigen.</li>
+                <li>Die Analyse und Visualisierung von Mesh-Daten erfordert leistungsstarke Programme und Hardware.</li>
+                <li>Unterschiedliche Mesh-Datenformate können die Interoperabilität zwischen verschiedenen GIS-Systemen erschweren.</li>
+                <li>Die feine Auflösung kann es schwierig machen, übergeordnete Muster zu erkennen.</li>
+            </ul>
         </section>
     </main>
     <footer>
